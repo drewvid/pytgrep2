@@ -1,0 +1,4 @@
+(ROOT (S (NP (DT The) (JJ quick) (JJ brown) (NN fox)) (VP (VBZ jumps) (PP (IN over) (NP (DT the) (JJ lazy) (NN dog)))) (. .)))
+(ROOT (S (NP (NNP John)) (VP (VBZ loves) (NP (NNP Mary)) (, ,) (CC but) (S (NP (NNP Mary)) (VP (VBZ loves) (NP (NNP Bill))))) (. .)))
+(ROOT (S (NP (DT A) (JJ smart) (NN dog)) (VP (VBD barked) (PP (IN at) (NP (DT the) (JJ big) (JJ yellow) (NN cat)))) (. .)))
+(ROOT (S (NP (PRP She)) (VP (VBZ reads) (NP (NNS books)) (ADVP (RB quietly)) (PP (IN in) (NP (DT the) (NN library)))) (. .)))

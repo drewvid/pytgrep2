@@ -1,0 +1,20 @@
+{
+    "0": {
+        "article_id": "art_001",
+        "title": "Astronomers discover a new planet",
+        "source": "Space News Daily",
+        "date": "2026-06-01"
+    },
+    "1": {
+        "article_id": "art_002",
+        "title": "Local team wins the championship",
+        "source": "Daily Sports",
+        "date": "2026-06-03"
+    },
+    "2": {
+        "article_id": "art_003",
+        "title": "Tech giant announces new AI model",
+        "source": "Tech Weekly",
+        "date": "2026-06-07"
+    }
+}

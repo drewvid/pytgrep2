@@ -1,0 +1,1 @@
+(TOP (NP (NP (NN Research)) (CC and) (NP (NN development))))(TOP (NP (NP (NN Budget)) (VP (VBD increased))))(TOP (NP (JJ Stretch) (NN yarn) (NNS machines)))

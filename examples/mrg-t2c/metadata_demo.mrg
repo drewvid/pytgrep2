@@ -1,0 +1,3 @@
+(ROOT (S (NP (NNS Astronomers)) (VP (VBD discovered) (NP (DT a) (JJ new) (NN planet))) (. .)))
+(ROOT (S (NP (DT The) (JJ local) (NN team)) (VP (VBD won) (NP (DT the) (NN championship))) (. .)))
+(ROOT (S (NP (DT The) (NN tech) (NN company)) (VP (VBD announced) (NP (DT a) (JJ new) (NN model))) (. .)))

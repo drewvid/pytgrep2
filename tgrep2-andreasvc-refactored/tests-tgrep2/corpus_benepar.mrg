@@ -1,0 +1,7 @@
+(ID_D1_S1 (ROOT (SBARQ (WHADVP (WRB Why)) (SQ (VBZ is) (NP (DT the) (NN sky)) (ADJP (JJ blue))) (. ?))))
+(ID_D1_S2 (ROOT (S (SBAR (IN Before) (S (NP (PRP I)) (VP (VBD ate) (NP (NN dinner))))) (, ,) (NP (PRP I)) (VP (VBD washed) (NP (PRP$ my) (NNS hands))) (. .))))
+(ID_D1_S3 (ROOT (S (SBAR (IN Because) (S (NP (PRP it)) (VP (VBD rained)))) (, ,) (NP (PRP we)) (VP (VBD stayed) (ADVP (RB inside))) (. .))))
+(ID_D1_S4 (ROOT (S (S (ADVP (RB First)) (S (NP (PRP we)) (VP (VBP mix)))) (, ,) (S (ADVP (RB then)) (NP (PRP we)) (VP (VBP bake))) (, ,) (S (ADVP (JJ next)) (NP (PRP we)) (VP (VBP eat))) (. .))))
+(ID_D1_S5 (ROOT (S (S (NP (PRP It)) (VP (MD might) (VP (VB rain) (NP (NN tomorrow))))) (, ,) (RB so) (S (VP (VB bring) (NP (DT a) (NN jacket)))) (. .))))
+(ID_D1_S6 (ROOT (S (NP (PRP It)) (VP (VBZ is) (PP (IN between) (NP (NP (DT the) (NN table)) (CC and) (NP (DT the) (NN chair))))) (. .))))
+(ID_D1_S7 (ROOT (S (NP (DT A) (NN triangle)) (VP (VBZ is) (NP (NP (DT a) (NN shape)) (SBAR (WHNP (WDT that)) (S (VP (VBZ has) (NP (CD three) (NNS sides))))))) (. .))))

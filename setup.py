@@ -16,17 +16,17 @@ def compile_and_copy_tgrep2():
     base_dir = Path(__file__).parent.resolve()
     andreas_dir = base_dir / "tgrep2-andreasvc-refactored"
     bwaldon_dir = base_dir / "tgrep2-bwaldon-refactored"
-    
+
     print("--------------------------------------------------")
     print("Compiling tgrep2 binaries...")
     print("--------------------------------------------------")
-    
+
     # 1. Compile tgrep2-andreasvc
     try:
         subprocess.check_call(["make", "-C", str(andreas_dir / "DRUtils"), "clean"])
-        subprocess.check_call(["make", "-C", str(andreas_dir / "TGrep2"), "clean"])
+        subprocess.check_call(["make", "-C", str(andreas_dir / "src-tgrep2"), "clean"])
         subprocess.check_call(["make", "-C", str(andreas_dir / "DRUtils")])
-        subprocess.check_call(["make", "-C", str(andreas_dir / "TGrep2")])
+        subprocess.check_call(["make", "-C", str(andreas_dir / "src-tgrep2")])
     except subprocess.CalledProcessError as e:
         print(f"ERROR: andreasvc compilation failed: {e}")
         raise RuntimeError("Failed to compile tgrep2-andreasvc C binary.") from e
@@ -56,14 +56,14 @@ def compile_and_copy_tgrep2():
     # Copy to root bin/ directory for local tests and programs
     root_bin_dir = base_dir / "bin"
     root_bin_dir.mkdir(parents=True, exist_ok=True)
-    
+
     root_andreas_dest = root_bin_dir / "tgrep2-andreasvc"
     root_bwaldon_dest = root_bin_dir / "tgrep2-bwaldon"
-    
+
     print(f"Copying compiled binaries to root bin folder: {root_bin_dir}")
     shutil.copy2(andreas_dir / "tgrep2", root_andreas_dest)
     shutil.copy2(bwaldon_dir / "tgrep2", root_bwaldon_dest)
-    
+
     root_andreas_dest.chmod(0o755)
     root_bwaldon_dest.chmod(0o755)
 
@@ -71,17 +71,17 @@ def compile_and_copy_tgrep2():
     try:
         dest_dir = Path.home() / ".local" / "bin"
         dest_dir.mkdir(parents=True, exist_ok=True)
-        
+
         # Copy as 'tgrep2'
         dest_file = dest_dir / "tgrep2"
         print(f"Copying default binary to: {dest_file}")
         shutil.copy2(andreas_dir / "tgrep2", dest_file)
         dest_file.chmod(0o755)
-        
+
         print("tgrep2 installation to $HOME/.local/bin completed.")
     except Exception as e:
         print(f"Warning: Could not copy default binary to $HOME/.local/bin: {e}")
-        
+
     print("--------------------------------------------------")
 
 class CustomBuildPy(build_py):

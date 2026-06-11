@@ -79,10 +79,11 @@ class TgrepOrchestrator:
         try:
             import spacy
             import benepar
+            import nltk
         except ImportError as e:
             raise ImportError(
-                "Parsing requires 'spacy' and 'benepar' to be installed. "
-                "Please run: pip install spacy benepar"
+                "Parsing requires 'spacy', 'benepar', and 'nltk' to be installed. "
+                "Please run: pip install spacy benepar nltk"
             ) from e
 
         # Load spaCy model
@@ -94,6 +95,20 @@ class TgrepOrchestrator:
                 "Please run: python -m spacy download en_core_web_sm"
             )
 
+        # Check if benepar_en3 model is downloaded, otherwise download it
+        try:
+            nltk.data.find("models/benepar_en3")
+        except LookupError:
+            print("benepar_en3 model not found. Attempting to download...")
+            try:
+                benepar.download("benepar_en3")
+            except Exception as e:
+                raise RuntimeError(
+                    f"Failed to download 'benepar_en3' model automatically: {e}. "
+                    "Please verify your internet connection or manually run: "
+                    "python -c \"import benepar; benepar.download('benepar_en3')\""
+                ) from e
+
         # Add benepar pipe depending on spaCy version
         try:
             if spacy.__version__.startswith("2."):
@@ -103,9 +118,8 @@ class TgrepOrchestrator:
                 nlp.add_pipe("benepar", config={"model": "benepar_en3"})
         except Exception as e:
             raise RuntimeError(
-                f"Failed to add benepar component to spaCy pipeline: {e}. "
-                "Verify that the 'benepar_en3' model is downloaded (benepar.download('benepar_en3'))."
-            )
+                f"Failed to add benepar component to spaCy pipeline: {e}."
+            ) from e
 
         self._nlp = nlp
 

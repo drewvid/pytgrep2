@@ -6,11 +6,11 @@ drutils:
 	$(MAKE) -C DRUtils
 
 tgrep2:
-	$(MAKE) -C TGrep2
+	$(MAKE) -C src-tgrep2
 
 clean:
 	$(MAKE) -C DRUtils clean
-	$(MAKE) -C TGrep2 clean
+	$(MAKE) -C src-tgrep2 clean
 
 install:
-	$(MAKE) -C TGrep2 install
+	$(MAKE) -C src-tgrep2 install

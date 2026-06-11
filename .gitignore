@@ -195,9 +195,9 @@ cython_debug/
 .abstra/
 
 # Visual Studio Code
-#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
+#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore
 #   that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#   and can be added to the global gitignore or merged into this file. However, if you prefer, 
+#   and can be added to the global gitignore or merged into this file. However, if you prefer,
 #   you could uncomment the following to ignore the entire vscode folder
 # .vscode/
 # Temporary file for partial code execution
@@ -224,8 +224,14 @@ __marimo__/
 /pytgrep2/bin/tgrep2-bwaldon
 
 # Temporary corpus files generated during runs
-/*.mrg
-/*.t2c
-/demos/*.mrg
-/demos/*.t2c
 
+*.mrg
+*.t2c
+
+# Query cache and validation files specific to a particular environment
+tgrep_query_cache.pkl.gz
+.agents/
+
+# Intermediate C compilation artifacts
+*.o
+*.a

@@ -76,7 +76,7 @@ graph TD
 ```
 
 ### How it works
-`pytgrep2` identifies components using patterns like `S < (NP=subj) < (VP < (VB*=verb) < (NP=obj))`. Gemini is then asked to classify the semantic roles and resolve pronouns.
+`pytgrep2` identifies components using patterns like `S < (NP=subj) < (VP < (/^VB/=verb) < (NP=obj))`. Gemini is then asked to classify the semantic roles and resolve pronouns.
 ````
 
 ---
